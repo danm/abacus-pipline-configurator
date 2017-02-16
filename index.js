@@ -11,14 +11,14 @@ try {
 
 if ('sandbox' === environment) {
     try {
-        appConfig = require('./configuration-secure.json');
+        appConfig = require('../../configuration-secure.json');
     } catch (e) {
         throw new Error('Cannot load configuration file');
     }
     appConfig.environment = environment;
 } else {
     try {
-        appConfig = require('./configuration.json');
+        appConfig = require('../../configuration.json');
     } catch (e) {
         throw new Error('Cannot load configuration file');
     }
