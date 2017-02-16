@@ -1,0 +1,21 @@
+{
+    "name": "abacus-pipline-configurator",
+    "version": "1.0.0",
+    "description": "Auto configure applications in the Abacus Pipeline",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "bump": "npm version patch -m 'version bump' && git push && npm publish"
+
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/danm/abacus-pipline-configurator.git"
+    },
+    "author": "Daniel Morrison <daniel.morrison@bbc.co.uk>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/danm/abacus-pipline-configurator/issues"
+    },
+    "homepage": "https://github.com/danm/abacus-pipline-configurator#readme"
+}
