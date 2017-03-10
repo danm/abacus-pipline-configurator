@@ -18,7 +18,7 @@ if ('sandbox' === environment) {
     appConfig.environment = environment;
 } else {
     try {
-        appConfig = require('../../configuration.json');
+        appConfig = require('../../configuration-' + environment + '.json');
     } catch (e) {
         throw new Error('Cannot load configuration file');
     }
