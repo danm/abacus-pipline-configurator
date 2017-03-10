@@ -1,6 +1,6 @@
 {
   "name": "abacus-pipline-configurator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Auto configure applications in the Abacus Pipeline",
   "main": "index.js",
   "scripts": {
