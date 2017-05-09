@@ -1,13 +1,12 @@
-let config;
+let appConfig;
+let cosmosConfig;
+let environment;
 
 try {
-    config = require('/config/config.json');
+    cosmosConfig = require('/config/config.json');
     environment = cosmosConfig.environment;
-    appConfig.cosmos = cosmosConfig;
-    appConfig.environment = environment;
 } catch (e) {
     environment = 'sandbox';
-    appConfig.environment = environment;
 }
 
 try {
@@ -16,7 +15,12 @@ try {
     throw new Error('Cannot load configuration file');
 }
 
-appConfig.environment = environment;
+if (environment !== 'sandbox') {
+    appConfig.cosmos = cosmosConfig;
+    appConfig.environment = environment;
+} else {
+    appConfig.environment = environment;
+}
 
 module.exports = {
     getConfig: appConfig,
